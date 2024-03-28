@@ -27,8 +27,10 @@ body {
   cursor: pointer;
   width: 200px;
   height: 30px;
+
+
 }
 
-.btn-nav {
-
+.btn-navbar:hover {
+  border: black solid 3px;
 }
