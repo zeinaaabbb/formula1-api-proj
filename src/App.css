@@ -1,0 +1,34 @@
+.App {
+  font-family: 'Gill Sans', 'Gill Sans MT', ;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* navbar */
+
+.navbar > h1 {
+  text-align: center;
+}
+
+.navlink {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-navbar {
+  margin: 10px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+}
+
+.btn-nav {
+
+}
