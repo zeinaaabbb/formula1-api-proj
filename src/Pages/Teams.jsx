@@ -1,7 +1,9 @@
 function Teams () {
 
   return (
-    <div>Teams</div>
+    <div>
+      Teams
+    </div>
     )
 };
 
