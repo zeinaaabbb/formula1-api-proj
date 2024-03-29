@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import styles from "./Drivers.module.css"
 
 function Drivers() {
 
@@ -10,19 +11,45 @@ function Drivers() {
     .then(response => response.json())
     .then((data) => {
       setDriverStanding(data["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"]);
-      console.log("drivers", driverStanding[0]["Driver"]["familyName"]);
-      console.log("wins", driverStanding[0]["wins"]);
+      // console.log("drivers", driverStanding[0]["Driver"]["familyName"]);
+      // console.log("wins", driverStanding[0]["wins"]);
+      // console.log("drivers", driverStanding);
     });
-}, [driverStanding]);
+}, []);
 
-  return(
-    <div className="drivers-container">
-      <div className="drivers-title">
-      <h1>Driver Standing</h1>
-      </div>
+const currentDate = new Date();
+const year = currentDate.getFullYear();
 
-    </div>
+return(<div className={styles.driverscontainer}>
+  <div className={styles.driverstitle}>
+  <h1>{year} Drivers Standing</h1>
+  </div>
+  <table className={styles.driverstable}>
+          <thead>
+            <tr className={styles.driversheading}>
+                <th>Position </th>
+                <th> Name </th>
+                <th> Points </th>
+            </tr>
+          </thead>
+          <tbody>
+  {driverStanding.map((driver, index) => {
+        const position = driver.position;
+        const familyName = driver.Driver.familyName;
+        const points = driver.points;
+        return (
+            <tr key={index} className={styles.driverscontent}>
+                <td>{position}</td>
+                <td>{familyName}</td>
+                <td>{points}pts</td>
+            </tr>
+
+            )
+          })}
+        </tbody>
+        </table>
+        </div>
   )
-}
+  }
 
 export default Drivers
