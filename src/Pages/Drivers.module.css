@@ -1,0 +1,29 @@
+.driverscontainer {
+
+}
+
+.driverstitle{
+  font-size: 1em;
+  margin-left: 20px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+
+}
+
+.driverstable>tr{
+  padding-bottom:0.5em;
+}
+
+.driverscontent{
+
+}
+
+tr{
+  display: flex;
+  padding: 0.5em;
+
+}
+
+.driversheading{
+}
