@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import styles from "./Teams.module.css";
 
 
 function Teams () {
@@ -13,8 +14,8 @@ function Teams () {
   }, []);
 
   return (
-      <div>
-        <div>
+      <div className={styles.teamscontainer}>
+        <div className={styles.teamstitle}>
           <h1>Teams Standing</h1>
         </div>
         <div>
@@ -39,8 +40,6 @@ function Teams () {
               ))}
           </tbody>
         </table>
-
-
         </div>
       </div>
       )
