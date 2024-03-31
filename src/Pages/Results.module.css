@@ -1,0 +1,13 @@
+.resultscontainer{
+  margin-left: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.resultstitle{
+  font-size: 1em;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
