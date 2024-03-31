@@ -14,7 +14,8 @@ function Results () {
   return (
     <div className={styles.resultscontainer}>
       <div className={styles.resultstitle}>
-        <h1>Latest Results</h1>
+        <h1>Race Results - {results.date}</h1>
+
       </div>
       <div>
         <table>
@@ -31,7 +32,6 @@ function Results () {
           <tr key={index}>
             <td>{result.round}</td>
             <td>{result.RaceName}</td>
-            <td>{result.date}</td>
           </tr>
         ))}
         </tbody>
