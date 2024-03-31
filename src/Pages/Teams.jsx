@@ -13,10 +13,13 @@ function Teams () {
     console.log("Teams", teamStanding);
   }, []);
 
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
       <div className={styles.teamscontainer}>
         <div className={styles.teamstitle}>
-          <h1>Teams Standing</h1>
+          <h1>{year} Teams Standing</h1>
         </div>
         <div>
         <table>

@@ -1,4 +1,5 @@
 import { useEffect , useState} from "react"
+import styles from "./Schedule.module.css"
 
 function Schedule () {
 
@@ -11,19 +12,39 @@ function Schedule () {
   }, [])
 
 
+  const date = new Date()
+  console.log(date);
+  const year = date.getFullYear()
+  const day = date.getDate()
+  const month = date.getMonth()
+
   return (
-    <div>
-      <div>
-        <h1>Race Schedule</h1>
+    <div className={styles.schedulecontainer}>
+      <div className={styles.scheduletitle}>
+        <h1>{year}  Race Schedule</h1>
       </div>
       <div>
+        <table>
+        <thead>
+          <tr>
+            <th>Race No.</th>
+            <th>Date</th>
+            <th>Grand Prix</th>
+            <th>Circuit</th>
+          </tr>
+        </thead>
+        <tbody>
         {raceSchedule.map((race, index) =>(
-          <div>
-            <li key={index}>{race.raceName} - {race.Circuit.circuitName}</li>
-            <li key={index}>{race.date}</li>
-            <li key={index}>{race.round}</li>
-          </div>
+          <tr key={index}>
+            <td>{race.round}</td>
+            <td>{race.date}</td>
+            <td>{race.raceName}</td>
+            <td>{race.Circuit.circuitName}</td>
+          </tr>
         ))}
+        </tbody>
+
+        </table>
       </div>
     </div>
     );
