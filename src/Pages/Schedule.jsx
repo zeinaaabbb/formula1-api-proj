@@ -37,9 +37,9 @@ function Schedule () {
         {raceSchedule.map((race, index) =>(
           <tr key={index}>
             <td>{race.round}</td>
-            <td>{race.date}</td>
             <td>{race.raceName}</td>
             <td>{race.Circuit.circuitName}</td>
+            <td>{race.date}</td>
           </tr>
         ))}
         </tbody>
