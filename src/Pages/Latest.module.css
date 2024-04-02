@@ -1,6 +1,6 @@
 .maintitle{
   margin-left: 20px;
-  font-size: 1.2em;
+  font-size: 1em;
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
@@ -17,6 +17,7 @@
   margin-left: 30px;
   width: 100%;
   margin-bottom: 30px;
+  width: fit-content;
 }
 
 .linklatest {
@@ -32,6 +33,7 @@
   border: solid black 2px;
   border-radius: 20px;
   padding: 5px 25px ;
+  width: fit-content;
 }
 
 .schedulecontainer{
@@ -42,4 +44,5 @@
   border: solid black 2px;
   border-radius: 20px;
   padding: 5px 25px ;
+  width: fit-content;
 }
