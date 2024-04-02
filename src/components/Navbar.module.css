@@ -29,6 +29,7 @@
 }
 
 .navbar{
-  width: 100%;
+  width: fit-content; /* Adjust width as needed */
+  margin: 0 auto;
   text-align: center;
 }
