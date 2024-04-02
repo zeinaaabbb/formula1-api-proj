@@ -53,7 +53,7 @@ function Results () {
             <th>Position</th>
             <th>Driver</th>
             <th>Status</th>
-            <th>Fastest Lap</th>
+            {/* <th>Fastest Lap</th> */}
 
           </tr>
         </thead>
@@ -63,12 +63,15 @@ function Results () {
           //  console.log("position", result.position)
           // console.log("familyName", result.Driver.familyName)
           // console.log("Status", result.status)
+          // console.log(result.FastestLap.rank == 1)
+          // const fastesLap = result.FastestLap.rank === 1
+          // console.log(fastestLap)
           // console.log("fastestlap", result)
           <tr key={index}>
             <td>{result.position}</td>
             <td>{result.Driver.familyName}</td>
             <td>{result.status}</td>
-            <td>{(result.FastestLap.rank === 1) ? "Fastest Lap" : "" }</td>
+            {/* <td>{(result.FastestLap.rank === 1) ? "Fastest Lap" : "" }</td> */}
           </tr>
         ))}
         </tbody>
