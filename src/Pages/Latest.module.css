@@ -22,3 +22,12 @@
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
+
+.latestdriverscontainer {
+  margin-left: 30px;
+  width: 30%;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 25px ;
+}

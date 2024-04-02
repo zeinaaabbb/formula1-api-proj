@@ -113,7 +113,7 @@ function Latest () {
 
 
       <div>
-        <h1 className={styles.lateststitle}>Drivers Standing</h1>
+        <h1 className={styles.lateststitle}>Current Drivers Standing</h1>
       </div>
       <table>
           <thead>
@@ -139,7 +139,7 @@ function Latest () {
 
 
       <div>
-        <h1 className={styles.lateststitle}>Teams Standing</h1>
+        <h1 className={styles.lateststitle}>Current Teams Standing</h1>
         <div>
         <table>
           <thead>

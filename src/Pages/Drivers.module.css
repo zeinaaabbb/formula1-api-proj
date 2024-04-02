@@ -1,7 +1,10 @@
 .driverscontainer {
   margin-left: 30px;
-  width: 100%;
+  width: 30%;
   margin-bottom: 30px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 25px ;
 }
 
 .driverstitle{
@@ -9,5 +12,4 @@
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
-
 }
