@@ -61,9 +61,12 @@ function Latest () {
 
   return (
     <div className={styles.latestcontainer}>
+
       <div className={styles.maintitle}>
         <h1>Latest</h1>
       </div>
+
+      <div className={styles.maincontainer}>
       <div>
         <h1 className={styles.lateststitle}>Last Results</h1>
       </div>
@@ -107,14 +110,18 @@ function Latest () {
               <td>{result.points}</td>
             </tr>
           ))}
-          <Link to="/results" className={styles.linklatest}><h5>-->Access Recent Race</h5></Link>
+          <Link to="/results" className={styles.linklatest}><h5>-->Recent Race</h5></Link>
         </tbody>
     </table>
+      </div>
 
 
+      <div className={styles.maincontainer}>
       <div>
         <h1 className={styles.lateststitle}>Current Drivers Standing</h1>
       </div>
+
+
       <table>
           <thead>
             <tr>
@@ -132,12 +139,13 @@ function Latest () {
                       <td>{driver.points}pts</td>
                     </tr>
                 ))}
-                <Link to="/drivers" className={styles.linklatest}><h5>-->Access Drivers List</h5></Link>
+                <Link to="/drivers" className={styles.linklatest}><h5>-->Drivers List</h5></Link>
         </tbody>
         </table>
+      </div>
 
 
-
+      <div className={styles.maincontainer}>
       <div>
         <h1 className={styles.lateststitle}>Current Teams Standing</h1>
         <div>
@@ -157,13 +165,14 @@ function Latest () {
                   <td>{team.points}pts</td>
                 </tr>
               ))}
-              <Link to="/teams" className={styles.linklatest}><h5>-->Access Teams List</h5></Link>
+              <Link to="/teams" className={styles.linklatest}><h5>-->Teams List</h5></Link>
           </tbody>
         </table>
         </div>
-
+        </div>
       </div>
 
+      <div className={styles.schedulecontainer}>
       <div>
         <h1 className={styles.lateststitle}>Upcoming Schedule</h1>
       </div>
@@ -187,11 +196,12 @@ function Latest () {
             <td>{new Date(race.date) >=  new Date(today) ? "upcoming" : ""}</td>
           </tr>
           ))}
-        <Link to="/schedule" className={styles.linklatest}><h5>-->Access Schedule List</h5></Link>
+        <Link to="/schedule" className={styles.linklatest}><h5>-->Schedule List</h5></Link>
         </tbody>
 
         </table>
 
+    </div>
     </div>
 
     )
