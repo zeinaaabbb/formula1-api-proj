@@ -33,7 +33,7 @@ return(<div className={styles.driverscontainer}>
             </tr>
           </thead>
           <tbody>
-  {driverStanding.map((driver, index) => {
+        {driverStanding.map((driver, index) => {
         const position = driver.position;
         const familyName = driver.Driver.familyName;
         const points = driver.points;
