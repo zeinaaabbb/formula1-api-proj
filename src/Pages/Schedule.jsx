@@ -12,11 +12,10 @@ function Schedule () {
   }, [])
 
 
-  const date = new Date()
-  console.log(date);
-  const year = date.getFullYear()
-  const day = date.getDate()
-  const month = date.getMonth()
+  const today = new Date()
+  console.log(today);
+  const year = today.getFullYear()
+
 
   return (
     <div className={styles.schedulecontainer}>
@@ -28,9 +27,10 @@ function Schedule () {
         <thead>
           <tr>
             <th>Race No.</th>
-            <th>Date</th>
             <th>Grand Prix</th>
             <th>Circuit</th>
+            <th>Date</th>
+            <th>Schedule</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +40,7 @@ function Schedule () {
             <td>{race.raceName}</td>
             <td>{race.Circuit.circuitName}</td>
             <td>{race.date}</td>
+            <td>{new Date(race.date) >=  new Date(today) ? "upcoming" : "past"}</td>
           </tr>
         ))}
         </tbody>
