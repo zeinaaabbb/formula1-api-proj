@@ -33,19 +33,22 @@ return(<div className={styles.driverscontainer}>
             </tr>
           </thead>
           <tbody>
-  {driverStanding.map((driver, index) => {
+        {driverStanding.map((driver, index) => {
         const position = driver.position;
         const familyName = driver.Driver.familyName;
         const points = driver.points;
+        // console.log(driver.Constructors[0].name)
         return (
             <tr key={index} className={styles.driverscontent}>
                 <td>{position}</td>
                 <td>{familyName}</td>
+                <td>{driver.Constructors[0].name}</td>
                 <td>{points}pts</td>
             </tr>
 
             )
-          })}
+          })
+          }
         </tbody>
         </table>
         </div>

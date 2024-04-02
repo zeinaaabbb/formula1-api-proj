@@ -1,0 +1,24 @@
+.maintitle{
+  font-size: 1.2em;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+.lateststitle{
+  font-size: 1.2em;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+.latestcontainer{
+  margin-left: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.linklatest {
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}

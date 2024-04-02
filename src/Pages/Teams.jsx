@@ -5,13 +5,20 @@ import styles from "./Teams.module.css";
 function Teams () {
 
   const [teamStanding, setTeamStanding] = useState([]);
+  const [top5Teams, setTop5Teams] = useState([])
 
   useEffect(() => {
     fetch("https://ergast.com/api/f1/current/constructorStandings.json")
     .then((response) => {return response.json()})
-    .then((data) => setTeamStanding(data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings));
-    console.log("Teams", teamStanding);
+    .then((data) => {
+    setTeamStanding(data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings);
+    const top5Teams = setTop5Teams(data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.slice(0,5));
+    setTop5Teams(top5Teams);
+  })
+  // console.log("top 5", top5Teams)
   }, []);
+
+
 
   const date = new Date();
   const year = date.getFullYear();
