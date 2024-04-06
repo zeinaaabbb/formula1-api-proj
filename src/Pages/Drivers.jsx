@@ -10,7 +10,8 @@ function Drivers() {
     fetch('http://ergast.com/api/f1/current/driverStandings.json')
     .then(response => response.json())
     .then((data) => {
-      setDriverStanding(data["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"]);
+      setDriverStanding(data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
+
       // console.log("drivers", driverStanding[0]["Driver"]["familyName"]);
       // console.log("wins", driverStanding[0]["wins"]);
       // console.log("drivers", driverStanding);
@@ -34,16 +35,17 @@ return(<div className={styles.driverscontainer}>
           </thead>
           <tbody>
         {driverStanding.map((driver, index) => {
-        const position = driver.position;
-        const familyName = driver.Driver.familyName;
-        const points = driver.points;
-        // console.log(driver.Constructors[0].name)
+          // console.log(driver.points)
+        // const position = driver.position;
+        // const familyName = driver.Driver.familyName;
+        // const points = driver.points;
+        // // console.log(driver.Constructors[0].name)
         return (
             <tr key={index} className={styles.driverscontent}>
-                <td>{position}</td>
-                <td>{familyName}</td>
+                <td>{driver.position}</td>
+                <td>{driver.Driver.familyName}</td>
                 <td>{driver.Constructors[0].name}</td>
-                <td>{points}pts</td>
+                <td>{driver.points}pts</td>
             </tr>
 
             )
